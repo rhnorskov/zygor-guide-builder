@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "example",
+      "dependencies": {
+        "zygor-guide-builder": "link:zygor-guide-builder",
+      },
+    },
+  },
+  "packages": {
+    "zygor-guide-builder": ["zygor-guide-builder@link:zygor-guide-builder", { "bin": { "zgb": "./src/cli/index.ts" } }],
+  }
+}

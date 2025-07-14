@@ -1,0 +1,20 @@
+{
+  "name": "zygor-guide-builder",
+  "version": "1.0.0",
+  "description": "A library and CLI tool for building Zygor guides",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "zgb": "./src/cli/index.ts"
+  },
+  "dependencies": {
+    "citty": "^0.1.6"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "type-fest": "^4.41.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Example project using zygor-guides-builder",
+  "type": "module",
+  "scripts": {
+    "build": "zgb build -o out",
+    "dev": "zgb build -w -o out"
+  },
+  "dependencies": {
+    "zygor-guide-builder": "link:zygor-guide-builder"
+  }
+}
