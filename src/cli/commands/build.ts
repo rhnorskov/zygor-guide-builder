@@ -98,7 +98,9 @@ export const buildCommand = defineCommand({
               .join(" ");
           });
 
-          return subSteps.join("\n");
+          result.push(subSteps.join("\n"));
+
+          return result.join("\n");
         })
         .join("\n");
 
