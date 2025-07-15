@@ -11,8 +11,8 @@ ZygorGuidesViewer:RegisterGuide("Leveling\\Example Guide", {
     description = "This is an example guide to demonstrate the structure.", 
 }, [[
 step
-label &quot;Welcome_Step&quot;
-Welcome to the guide! |tip Press &#39;Next&#39; to continue.
+label "Welcome_Step"
+Welcome to the guide! |tip Press 'Next' to continue.
 step
 This is an introduction to the guide.
 |tip Make sure to read everything carefully.
