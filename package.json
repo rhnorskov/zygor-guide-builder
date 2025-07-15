@@ -8,10 +8,15 @@
     "zgb": "./src/cli/index.ts"
   },
   "dependencies": {
-    "citty": "^0.1.6"
+    "change-case": "^5.4.4",
+    "citty": "^0.1.6",
+    "mustache": "^4.2.0",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/handlebars": "^4.1.0",
+    "@types/mustache": "^4.2.6",
     "type-fest": "^4.41.0"
   },
   "peerDependencies": {

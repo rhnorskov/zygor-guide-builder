@@ -8,6 +8,8 @@ import {
 
 export const meta: GuideMeta = {
   title: "Example Guide",
+  description: "This is an example guide to demonstrate the structure.",
+  category: "Leveling",
 };
 
 export const content: GuideContent = [

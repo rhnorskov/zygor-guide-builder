@@ -1,0 +1,14 @@
+local ZygorGuidesViewer = ZygorGuidesViewer 
+
+if not ZygorGuidesViewer then 
+    return
+end 
+
+ZygorGuidesViewer.GuideMenuTier = "CLA" 
+
+ZygorGuidesViewer:RegisterGuide("{{guidePath}}", {
+    mopready = true, 
+    description = "{{description}}", 
+}, [[
+{{steps}}
+]])

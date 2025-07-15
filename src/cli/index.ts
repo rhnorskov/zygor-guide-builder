@@ -1,5 +1,6 @@
+#!/usr/bin/env bun
 import { defineCommand, runMain } from "citty";
-import { buildCommand } from "./commands/build";
+import { buildCommand } from "./commands/build.ts";
 
 const main = defineCommand({
   meta: {
