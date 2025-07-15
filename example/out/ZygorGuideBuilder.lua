@@ -6,5 +6,3 @@ if not ZygorGuidesViewer then
 end
 
 print("Zygor Guide Builder: Core loaded. Guide files will load next...")
-
--- Guide files are loaded automatically by the TOC file

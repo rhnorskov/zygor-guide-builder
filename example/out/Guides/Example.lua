@@ -10,7 +10,10 @@ ZygorGuidesViewer:RegisterGuide("Leveling\\Example Guide", {
     mopready = true, 
     description = "This is an example guide to demonstrate the structure.", 
 }, [[
+step
+label &quot;Welcome_Step&quot;
 Welcome to the guide! |tip Press &#39;Next&#39; to continue.
+step
 This is an introduction to the guide.
 |tip Make sure to read everything carefully.
 ]])
