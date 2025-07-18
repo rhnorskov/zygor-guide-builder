@@ -1,9 +1,0 @@
-## Interface:50500
-## Title: |cffffffffZygor Guide Builder|r
-## Notes:A custom addon for building and registering Zygor guides
-## Version:1.0.0
-## Dependencies:ZygorGuidesViewerClassicTBC
-
-ZygorGuideBuilder.lua
-
-Guides/Example.lua
