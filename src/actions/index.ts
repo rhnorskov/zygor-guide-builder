@@ -1,3 +1,6 @@
-// Re-export everything from the actions feature
-export { ActionSchema, type Action } from "./schema.ts";
-export { text, ding, tip } from "./builders.ts";
+export * from "./click.ts";
+export * from "./ding.ts";
+export * from "./route.ts";
+export * from "./step.ts";
+export * from "./text.ts";
+export * from "./tip.ts";

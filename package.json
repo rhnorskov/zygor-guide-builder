@@ -10,12 +10,14 @@
   "dependencies": {
     "change-case": "^5.4.4",
     "citty": "^0.1.6",
+    "lodash": "^4.17.21",
     "mustache": "^4.2.0",
     "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/handlebars": "^4.1.0",
+    "@types/lodash": "^4.17.20",
     "@types/mustache": "^4.2.6",
     "type-fest": "^4.41.0"
   },

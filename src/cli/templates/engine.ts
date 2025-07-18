@@ -19,7 +19,7 @@ export interface TemplateContext {
 export interface GuideTemplateContext {
   guidePath: string;
   description: string;
-  steps: string;
+  content: string;
 }
 
 class TemplateEngine {

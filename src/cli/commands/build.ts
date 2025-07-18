@@ -2,11 +2,11 @@ import { Glob } from "bun";
 import { defineCommand } from "citty";
 import { join, basename, win32 } from "node:path";
 import { mkdir, writeFile, rm } from "node:fs/promises";
-import { isGuideContent, isGuideMeta } from "../../index.ts";
-import { isNonNullish } from "../../utils/is-nullish.ts";
-import { templateEngine } from "../template/engine.ts";
-import type { TemplateContext } from "../template/engine.ts";
+
+import { templateEngine } from "../templates/engine.ts";
+import type { TemplateContext } from "../templates/engine.ts";
 import { pascalCase } from "change-case";
+import { build } from "../../builder.ts";
 
 export const buildCommand = defineCommand({
   meta: {
@@ -68,46 +68,11 @@ export const buildCommand = defineCommand({
         join(process.cwd(), args.input, file)
       );
 
-      if (!isGuideMeta(meta)) {
-        console.error(`Invalid guide meta in file: ${file}`);
-        continue;
-      }
-
-      if (!isGuideContent(content)) {
-        console.error(`Invalid guide content in file: ${file}`);
-        continue;
-      }
-
-      const steps = content
-        .map((step) => {
-          const result = ["step"];
-
-          if (step.label) {
-            result.push(`label "${step.label}"`);
-          }
-
-          const subSteps = step.subSteps.map((subStep) => {
-            if (Array.isArray(subStep)) {
-              return subStep
-                .map((s) => [s.command, s.value].filter(isNonNullish).join(" "))
-                .join(" ");
-            }
-
-            return [subStep.command, subStep.value]
-              .filter(isNonNullish)
-              .join(" ");
-          });
-
-          result.push(subSteps.join("\n"));
-
-          return result.join("\n");
-        })
-        .join("\n");
-
       if (args.verbose) {
         console.log(`Processing guide: ${meta.title}`);
-        console.log(steps);
+        console.log(content);
       }
+      console.log(build(content));
 
       // Generate guide file if output directory is specified
       if (args.output) {
@@ -119,7 +84,7 @@ export const buildCommand = defineCommand({
         const guideContent = await templateEngine.renderGuide({
           guidePath,
           description: meta.description,
-          steps,
+          content: build(content),
         });
 
         await writeFile(
